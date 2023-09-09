@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF 8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rishika's Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/36a9d0718e.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="jquery.js"></script>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname)
+            {
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+            $(document).ready(function()
+            {
+                $("#bars").click(function()
+                {
+                    $("#menu").css("right", "0");
+                })
+
+                $("#cross").click(function()
+                {
+                    $("#menu").css("right", "-200px");
+                })
+            })
+
+        </script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="logo.png" class="logo">
+                    <ul id="menu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" id="cross"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" id="bars"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Programmer</p>
+                    <h1>Hi , I'm <span>Rishika </span><br>Reddy From India.</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="rishika_photo1.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>A dynamic pre-final year student with a deep passion for coding and innovation. Possesses a unique blend of leadership skills and fluency in three languages, enabling excellence in diverse environments. Committed to making a significant impact in the tech industry through the leverage of experiences.Outside of professional pursuits, a passionate sports enthusiast, creative painter, and avid reader.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>C++ Programming</span><br>Object-oriented programming</li>
+                                <li><span>Java Programming</span><br>Object-oriented programming</li>
+                                <li><span>C Programming</span><br>Procedural programming</li>
+                                <li><span>Python Programming</span><br>Developing AI-ML Projects</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>June 2023 - July 2023</span><br>Artificial Intelligence Intern at IBM</li>
+                                <li><span>August 2023</span><br>Cybersecurity Virtual Intern at Goldman Sachs</li>
+                                <li><span>May 2023 - July 2023</span><br>Data Analytics Virtual Internship at AWS</li>
+                                <li><span>Dec 2022 - Feb 2023</span><br>AI-ML Virtual Internship at AWS</li>
+                                <li><span>June 2023 - July 2023</span><br>Statistics and ML Industrial Training at Medi-Caps University</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021 - Current</span><br>BTech CSE from Medi-Caps University</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Projects">
+            <div class="container">
+                <h1 class="subtitle">My Work</h1>
+                <div class="project-list">
+                    <div>
+                        <i class="fa-solid fa-computer"></i>
+                        <h2>AI Mental Fitness Tracker</h2>
+                        <p>The AI Mental Fitness Tracker project aims to develop an advanced artificial intelligence system that can accurately predict the percentage of mental disorders within a given population.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Student Record Management</h2>
+                        <p>Student Management System project can be used to manage and track student performance, attendance, and grades. </p>
+                        <a href="#">Learn more</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="Contact">
+            <div class="container">
+                <h1 class="subtitle">Contact Me</h1>
+                <div class="contact-list">
+
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+91 6269370641</p>
+                    </div>
+    
+                    <div style="text-align: center;">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>www.linkedin.com/in/rishika-reddy-varimalla-690698232</p>
+                    </div>
+    
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>rishikareddyvarimalla@gmail.com</p>
+                    </div>
+    
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Indore, India - 452001</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright @ Rishika Reddy Varimalla</p>
+        </div>
+    </body>
+</html>
